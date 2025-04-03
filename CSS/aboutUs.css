@@ -1,0 +1,1030 @@
+:root {
+    --primary-color: #0a0d14;
+    --secondary-color: #aa956b;
+    --tertiary-color: #0f141f;
+    --text-color: #fff;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Nunito", sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+
+
+
+
+nav {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.nav-logo svg {
+    color: var(--secondary-color);
+}
+
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 2.4rem;
+    width: 3rem;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 0.3rem;
+    background-color: var(--secondary-color);
+    transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: translateY(1rem) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-1rem) rotate(-45deg);
+}
+
+
+
+
+
+/* NAV MENU */
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-menu a {
+    border-bottom: 1px solid transparent;
+    transition: color 0.4s ease, border-bottom-color 0.4s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
+}
+
+.nav-order {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.nav-order button {
+    padding: 1.4rem 2rem;
+    border-radius: 2.5rem;
+    border: .2rem solid var(--secondary-color);
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-order button:hover {
+    background-color: #8a7654;
+}
+
+.nav-order button a {
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+
+
+
+
+
+
+
+
+
+/* ABOUT CONTENT */
+
+
+
+.about {
+    margin: 6rem 0;
+    padding: 4rem 2rem;
+    background-color: var(--primary-color);
+    text-align: center;
+}
+
+.about h2 {
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.about h2:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 5rem auto ;
+}
+
+.about-item {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.about-item:hover {
+    transform: translateY(-10px);
+}
+
+.about-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about-item:hover img {
+    transform: scale(1.05);
+}
+
+.about-text {
+    background-color: var(--tertiary-color);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    color: var(--text-color);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.about-text .subtitle {
+    font-size: 1.4rem;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-family: "Nunito", sans-serif;
+    letter-spacing: 1px;
+}
+
+.about-text h3 {
+    font-size: 2.4rem;
+    font-family: "Montserrat", sans-serif;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.about-text p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    font-family: "Nunito", sans-serif;
+    line-height: 1.7;
+}
+
+.about-text .read-more {
+    padding: 1rem 2rem;
+    border: 2px solid var(--secondary-color);
+    background-color: transparent;
+    color: var(--text-color);
+    font-size: 1.4rem;
+    font-family: "Nunito", sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-top: auto;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.about-text .read-more:hover {
+    background-color: var(--secondary-color);
+}
+
+/* History Section */
+.about-history {
+    max-width: 1200px;
+    margin: 6rem auto;
+    padding: 3rem;
+    background-color: var(--tertiary-color);
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.history-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.history-text h3 {
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    text-align: left;
+    font-weight: 700;
+}
+
+.history-text p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    font-family: "Nunito", sans-serif;
+    line-height: 1.8;
+    text-align: left;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 1.5rem;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background-color: var(--secondary-color);
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    padding-left: 4rem;
+    position: relative;
+    text-align: left;
+}
+
+.timeline-item:before {
+    content: '';
+    position: absolute;
+    left: 0.5rem;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--secondary-color);
+}
+
+.year {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-right: 2rem;
+    font-family: "Montserrat", sans-serif;
+    min-width: 70px;
+}
+
+.event {
+    font-size: 1.6rem;
+    font-family: "Nunito", sans-serif;
+}
+
+/* Chef Profile */
+.chef-profile {
+    max-width: 1200px;
+    margin: 6rem auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.chef-image img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.chef-bio {
+    text-align: left;
+    padding: 0 2rem 0 2rem ;
+}
+
+.chef-bio h3 {
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.chef-bio p {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    font-family: "Nunito", sans-serif;
+    line-height: 1.8;
+}
+
+.chef-awards {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: var(--tertiary-color);
+    border-radius: 5px;
+}
+
+.chef-awards h4 {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+.chef-awards ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+}
+
+.chef-awards li {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    padding-left: 2rem;
+    position: relative;
+    font-family: "Nunito", sans-serif;
+}
+
+.chef-awards li:before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--secondary-color);
+    font-size: 2rem;
+}
+
+/* Philosophy Section */
+.philosophy-section {
+    max-width: 1200px;
+    margin: 6rem auto;
+    padding: 3rem;
+}
+
+.philosophy-section h3 {
+    font-size: 3rem;
+    font-family: "Montserrat", sans-serif;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+}
+
+.philosophy-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--tertiary-color);
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+
+.philosophy-item:hover {
+    transform: translateY(-10px);
+}
+
+.philosophy-icon {
+    font-size: 3.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+.philosophy-item h4 {
+    font-size: 2rem;
+    font-family: "Montserrat", sans-serif;
+    color: var(--secondary-color);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.philosophy-item p {
+    font-size: 1.5rem;
+    font-family: "Nunito", sans-serif;
+    line-height: 1.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  FOOTER CONTENT */
+
+.footer {
+    background-color: var(--tertiary-color);
+    color: #fff;
+    text-align: left;
+    width: 100%;
+    padding: 2rem 0;
+    margin-top: 10rem;
+}
+
+.footer-container {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container h2 {
+    font-size: 3rem;
+}
+
+.footer-container p {
+    font-size: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color);
+}
+
+
+
+.footer-credit {
+    color: var(--text-color);
+    font-size: 4rem;
+}
+
+.footer-credit a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.footer-credit a:hover {
+    color: #dec28d;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Adjustments */
+
+
+
+
+@media (max-width: 1200px) {
+    
+    .about-content, .philosophy-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Mobile Styles */
+
+
+
+@media (max-width: 768px) {
+
+    
+
+    nav {
+        padding: 1.5rem 2rem;
+        justify-content: space-between;
+    }
+    
+    .menu-toggle {
+        display: block;
+        order: 1;
+        cursor: pointer;
+    }
+    
+    .nav-logo {
+        order: 2;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: .5rem;
+    }
+    
+    .nav-logo svg {
+        color: var(--secondary-color);
+    }
+
+    .nav-logo h2 {
+    padding: 0; 
+}
+    
+    .nav-order {
+        order: 3;
+        margin: 0;
+    }
+    
+    .nav-order button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1.4rem;
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 6.5rem;
+        left: -100%;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        gap: 0;
+        transition: all 0.5s ease;
+        z-index: 99;
+        padding: 2rem 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transform: none;
+        overflow-y: auto;
+    }
+    
+    .nav-menu.active {
+        left: 0;
+        transform: translateX(0);
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        padding: 1.5rem 0;
+        opacity: 0;
+        transform: translateX(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transition-delay: calc(0.05s * var(--item-index, 0));
+    }
+    
+    .nav-menu.active li {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+    .nav-menu a {
+        display: block;
+        width: 100%;
+        border-bottom: none;
+    }
+    
+    .nav-menu a:hover {
+        border-bottom: none;
+    }
+
+
+
+
+
+
+    .about-content {
+        grid-template-columns: 1fr; 
+        gap: 1.5rem;
+    }
+
+    .about h2 {
+        font-size: 2.5rem;
+    }
+
+    .about-item img {
+        height: 300px;
+    }
+
+    .about-text h3 {
+        font-size: 2rem;
+    }
+
+    .about-text .subtitle {
+        font-size: 1.2rem;
+    }
+
+    .about-text p {
+        font-size: 1.4rem;
+    }
+
+
+
+    .about-content, .history-content, .chef-profile, .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .history-content, .chef-profile {
+        gap: 3rem;
+    }
+    
+    .about h2 {
+        font-size: 2.8rem;
+    }
+    
+    .about-text h3, .history-text h3, .chef-bio h3, .philosophy-section h3 {
+        font-size: 2.4rem;
+    }
+    
+    .about-history, .philosophy-section {
+        padding: 2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 560px) {
+
+    nav {
+        padding: 1.5rem 2rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .menu-toggle {
+        display: block;
+        order: 1;
+        z-index: 10;
+    }
+    
+    .nav-logo {
+        order: 2;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .nav-logo h2 {
+        font-size: 1.3rem;
+        margin: 0;
+    }
+    
+    .nav-order {
+        order: 3;
+        margin: 0;
+        margin-left: auto;
+    }
+    
+    .nav-order button {
+        padding: 0.6rem 1.2rem; /* Smaller button */
+        font-size: 1rem;
+        border-width: 0.2rem; /* Thinner border */
+    }
+    
+    .nav-menu {
+        position: fixed;
+        top: 5.5rem; /* Adjusted top position */
+        left: -100%;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--primary-color);
+        gap: 0;
+        transition: all 0.5s ease;
+        z-index: 99;
+        padding: 2rem 0;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transform: none; /* Reset any transforms */
+    }
+    
+    .nav-menu.active {
+        left: 0;
+    }
+    
+    .nav-menu li {
+        width: 100%;
+        text-align: center;
+        padding: 1.5rem 0;
+    }
+    
+    .nav-menu a {
+        display: block;
+        width: 100%;
+        border-bottom: none;
+    }
+    
+    .nav-menu a:hover {
+        border-bottom: none;
+    }
+    
+    h1 {
+        font-size: 2.5rem; /* Smaller heading */
+    }
+    
+    /* Fix the main content positioning to account for navbar */
+    .main-content {
+        margin-top: 6rem;
+    }
+
+    .main-button{
+        margin: 0 auto;
+    }
+
+    .main-button button{
+        padding: 1.5rem 4rem;
+        font-size: 1.2rem;
+    }
+
+
+
+
+
+
+
+
+
+    .message {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 1rem; /* Menor espacio entre elementos */
+        padding: 2rem 1rem; /* Menor padding en pantallas pequeñas */
+    }
+
+    .message-content {
+        padding: 1.5rem;
+        text-align: center; /* Centra el texto para mejor legibilidad */
+    }
+
+    .message-content .quote {
+        font-size: 6rem; /* Reduce el tamaño de las comillas */
+    }
+
+    .message-content h2 {
+        font-size: 2rem; /* Reduce el tamaño del título */
+        margin-bottom: 1rem;
+    }
+
+    .message-content p {
+        font-size: 1.4rem; /* Reduce el tamaño del párrafo */
+        margin-bottom: 1.5rem;
+    }
+
+    .message-content h3 {
+        font-size: 1.8rem; /* Reduce el tamaño del nombre */
+        margin-bottom: 0.3rem;
+    }
+
+    .message-content .role {
+        font-size: 1.2rem; /* Reduce el tamaño del cargo */
+    }
+
+    .message img {
+        margin: auto;
+        height: 250px; /* Reduce la altura de la imagen */
+        width: 96%;
+    }
+
+
+
+
+
+
+
+
+    .menu-catalog h2 {
+        font-size: 3rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    
+    .dish-name {
+        font-size: 1.6rem;
+    }
+    
+    
+    
+    .menu-food small {
+        font-size: 1.3rem;
+    }
+    
+    
+
+
+    .about {
+        padding: 3rem 1.5rem;
+    }
+    
+    .about h2 {
+        font-size: 2.4rem;
+    }
+    
+    .about-text h3, .history-text h3, .chef-bio h3, .philosophy-section h3 {
+        font-size: 2rem;
+    }
+    
+    .about-text p, .history-text p, .chef-bio p, .philosophy-item p {
+        font-size: 1.4rem;
+    }
+    
+    .year {
+        font-size: 1.8rem;
+        min-width: 60px;
+    }
+    
+    .philosophy-icon {
+        font-size: 3rem;
+    }
+    
+    
+    
+    
+
+
+
+}
