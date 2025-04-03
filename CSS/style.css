@@ -33,9 +33,7 @@ a {
 }
 
 
-
-
-
+/* NAV MENU */
 
 nav {
     background-color: var(--primary-color);
@@ -93,12 +91,6 @@ nav {
     transform: translateY(-1rem) rotate(-45deg);
 }
 
-
-
-
-
-/* NAV MENU */
-
 .nav-menu {
     list-style: none;
     display: flex;
@@ -145,15 +137,7 @@ nav {
 }
 
 
-
-
-
-
-
-
-
 /* MAIN CONTENT */
-
 
 .main-content {
     width: 100%;
@@ -189,27 +173,7 @@ h1 {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ABOUT CONTENT */
-
-
 
 .about {
     margin: 5rem 0;
@@ -292,24 +256,7 @@ h1 {
     background-color: var(--secondary-color);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* MESSAGE CONTENT */
-
 
 .message {
     display: grid;
@@ -372,23 +319,7 @@ h1 {
     object-fit: cover; 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*  MENU CONTENT */
-
 
         .menu {
             text-align: left;
@@ -433,7 +364,6 @@ h1 {
             margin-top: 0;
             margin-bottom: 2rem;
         }
-
         .menu-food ul {
             list-style: none;
             padding: 0;
@@ -504,13 +434,10 @@ h1 {
             object-fit: cover;
             border-radius: 4px;
         }
-
-
         .menu-images img{
             flex: 1;
             overflow: hidden;
         }
-
         .menu-images img{
             width: 100%;
             height: 100%;
@@ -518,23 +445,9 @@ h1 {
             border-radius: 8px;
             transition: transform 0.5s ease;
         }
-
         .menu-images img:hover {
             transform: scale(1.05);
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*  FOOTER CONTENT */
 
@@ -546,138 +459,46 @@ h1 {
     padding: 2rem 0;
     margin-top: 10rem;
 }
-
 .footer-container {
     margin: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .footer-container h2 {
     font-size: 3rem;
 }
-
 .footer-container p {
     font-size: 1.5rem;
 }
-
 .social-icons {
     display: flex;
     justify-content: center;
     gap: 3rem;
 }
-
 .social-icons a {
     color: #fff;
     font-size: 1.5rem;
     text-decoration: none;
     transition: color 0.3s;
 }
-
 .social-icons a:hover {
     color: var(--secondary-color);
 }
-
-
-
 .footer-credit {
     color: var(--text-color);
     font-size: 4rem;
 }
-
 .footer-credit a {
     color: var(--secondary-color);
     text-decoration: none;
     font-weight: bolder;
 }
-
 .footer-credit a:hover {
     color: #dec28d;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Mobile Styles */
-
-
 
 @media (max-width: 768px) {
     nav {
@@ -702,21 +523,17 @@ h1 {
     .nav-logo svg {
         color: var(--secondary-color);
     }
-
     .nav-logo h2 {
     padding: 0; 
-}
-    
+    }
     .nav-order {
         order: 3;
         margin: 0;
     }
-    
     .nav-order button {
         padding: 0.8rem 1.5rem;
         font-size: 1.4rem;
     }
-    
     .nav-menu {
         position: fixed;
         top: 6.5rem;
@@ -732,12 +549,10 @@ h1 {
         transform: none;
         overflow-y: auto;
     }
-    
     .nav-menu.active {
         left: 0;
         transform: translateX(0);
     }
-    
     .nav-menu li {
         width: 100%;
         text-align: center;
@@ -747,135 +562,82 @@ h1 {
         transition: opacity 0.3s ease, transform 0.3s ease;
         transition-delay: calc(0.05s * var(--item-index, 0));
     }
-    
     .nav-menu.active li {
         opacity: 1;
         transform: translateX(0);
     }
-    
     .nav-menu a {
         display: block;
         width: 100%;
         border-bottom: none;
     }
-    
     .nav-menu a:hover {
         border-bottom: none;
     }
-    
     h1 {
         font-size: 3rem;
     }
-
     .main-button{
         margin: 0 auto;
     }
-
     .main-button button{
         padding: 1.5rem 4rem;
-
     }
-
-
-
-
-
-
-
     .about-content {
         grid-template-columns: 1fr; 
         gap: 1.5rem;
     }
-
     .about h2 {
         font-size: 2.5rem;
     }
-
     .about-item img {
         height: 300px;
     }
-
     .about-text h3 {
         font-size: 2rem;
     }
-
     .about-text .subtitle {
         font-size: 1.2rem;
     }
-
     .about-text p {
         font-size: 1.4rem;
     }
+    .message {
+        padding: 4rem 2rem; 
+    }
+    .menu {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+    .menu-catalog {
+        padding-right: 0;
+    }
+    .menu-catalog h2 {
+        font-size: 3rem;
+        margin-bottom: 1.2rem;
+    }
+    .dish-name {
+        font-size: 1.8rem;
+    }
+    .menu-food li {
+        margin-bottom: 1.4rem;
+    }
+    .menu-catalog h3, h2, .menu-food{
+        padding: 0 3rem;
+    }
+    .menu-food small {
+        font-size: 1.5rem;
+    }
+    .image-large {
+        height: 250px;
+    }
+    .image-grid {
+        height: 160px;
+    }
+    }
 
-.message {
-    padding: 4rem 2rem; 
-
-}
-
-.menu {
-    flex-direction: column;
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.menu-catalog {
-    padding-right: 0;
-}
-
-.menu-catalog h2 {
-    font-size: 3rem;
-    margin-bottom: 1.2rem;
-}
-
-.dish-name {
-    font-size: 1.8rem;
-}
-
-.menu-food li {
-    margin-bottom: 1.4rem;
-}
-
-.menu-catalog h3, h2, .menu-food{
-    padding: 0 3rem;
-}
-
-
-.menu-food small {
-    font-size: 1.5rem;
-}
-
-.image-large {
-    height: 250px;
-}
-
-.image-grid {
-    height: 160px;
-}
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* QUERIES*/
 
 @media (max-width: 560px) {
 
@@ -884,37 +646,31 @@ h1 {
         justify-content: space-between;
         align-items: center;
     }
-    
     .menu-toggle {
         display: block;
         order: 1;
         z-index: 10;
     }
-    
     .nav-logo {
         order: 2;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
     }
-    
     .nav-logo h2 {
         font-size: 1.3rem;
         margin: 0;
     }
-    
     .nav-order {
         order: 3;
         margin: 0;
         margin-left: auto;
     }
-    
     .nav-order button {
         padding: 0.6rem 1.2rem; /* Smaller button */
         font-size: 1rem;
         border-width: 0.2rem; /* Thinner border */
     }
-    
     .nav-menu {
         position: fixed;
         top: 5.5rem; /* Adjusted top position */
@@ -929,123 +685,75 @@ h1 {
         box-shadow: 0 4px 5px rgba(0,0,0,0.2);
         transform: none; /* Reset any transforms */
     }
-    
     .nav-menu.active {
         left: 0;
     }
-    
     .nav-menu li {
         width: 100%;
         text-align: center;
         padding: 1.5rem 0;
     }
-    
     .nav-menu a {
         display: block;
         width: 100%;
         border-bottom: none;
     }
-    
     .nav-menu a:hover {
         border-bottom: none;
     }
-    
     h1 {
         font-size: 2.5rem; /* Smaller heading */
     }
-    
-    /* Fix the main content positioning to account for navbar */
     .main-content {
         margin-top: 6rem;
     }
-
     .main-button{
         margin: 0 auto;
     }
-
     .main-button button{
         padding: 1.5rem 4rem;
         font-size: 1.2rem;
     }
-
-
-
-
-
-
-
-
-
     .message {
         grid-template-columns: 1fr; /* Una sola columna */
         gap: 1rem; /* Menor espacio entre elementos */
         padding: 2rem 1rem; /* Menor padding en pantallas pequeñas */
     }
-
     .message-content {
         padding: 1.5rem;
         text-align: center; /* Centra el texto para mejor legibilidad */
     }
-
     .message-content .quote {
         font-size: 6rem; /* Reduce el tamaño de las comillas */
     }
-
     .message-content h2 {
         font-size: 2rem; /* Reduce el tamaño del título */
         margin-bottom: 1rem;
     }
-
     .message-content p {
         font-size: 1.4rem; /* Reduce el tamaño del párrafo */
         margin-bottom: 1.5rem;
     }
-
     .message-content h3 {
         font-size: 1.8rem; /* Reduce el tamaño del nombre */
         margin-bottom: 0.3rem;
     }
-
     .message-content .role {
         font-size: 1.2rem; /* Reduce el tamaño del cargo */
     }
-
     .message img {
         margin: auto;
         height: 250px; /* Reduce la altura de la imagen */
         width: 96%;
     }
-
-
-
-
-
-
-
-
     .menu-catalog h2 {
         font-size: 3rem;
         margin-bottom: 1.2rem;
     }
-    
-    
     .dish-name {
         font-size: 1.6rem;
     }
-    
-    
-    
     .menu-food small {
         font-size: 1.3rem;
     }
-    
-    
-    
-    
-    
-    
-
-
-
-
 }

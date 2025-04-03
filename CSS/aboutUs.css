@@ -32,9 +32,7 @@ a {
     transition: color 0.3s ease;
 }
 
-
-
-
+/* NAV MENU */
 
 nav {
     background-color: var(--primary-color);
@@ -92,12 +90,6 @@ nav {
     transform: translateY(-1rem) rotate(-45deg);
 }
 
-
-
-
-
-/* NAV MENU */
-
 .nav-menu {
     list-style: none;
     display: flex;
@@ -144,16 +136,7 @@ nav {
 }
 
 
-
-
-
-
-
-
-
-
 /* ABOUT CONTENT */
-
 
 
 .about {
@@ -273,6 +256,7 @@ nav {
 }
 
 /* History Section */
+
 .about-history {
     max-width: 1200px;
     margin: 6rem auto;
@@ -486,23 +470,6 @@ nav {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*  FOOTER CONTENT */
 
 .footer {
@@ -547,7 +514,6 @@ nav {
 }
 
 
-
 .footer-credit {
     color: var(--text-color);
     font-size: 4rem;
@@ -563,81 +529,7 @@ nav {
     color: #dec28d;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Responsive Adjustments */
-
-
-
+/* QUERIES */
 
 @media (max-width: 1200px) {
     
@@ -645,33 +537,6 @@ nav {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Mobile Styles */
-
 
 
 @media (max-width: 768px) {
@@ -761,11 +626,6 @@ nav {
         border-bottom: none;
     }
 
-
-
-
-
-
     .about-content {
         grid-template-columns: 1fr; 
         gap: 1.5rem;
@@ -791,8 +651,6 @@ nav {
         font-size: 1.4rem;
     }
 
-
-
     .about-content, .history-content, .chef-profile, .philosophy-grid {
         grid-template-columns: 1fr;
     }
@@ -813,22 +671,6 @@ nav {
         padding: 2rem;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @media (max-width: 560px) {
@@ -923,13 +765,6 @@ nav {
     }
 
 
-
-
-
-
-
-
-
     .message {
         grid-template-columns: 1fr; /* Una sola columna */
         gap: 1rem; /* Menor espacio entre elementos */
@@ -970,13 +805,6 @@ nav {
         width: 96%;
     }
 
-
-
-
-
-
-
-
     .menu-catalog h2 {
         font-size: 3rem;
         margin-bottom: 1.2rem;
@@ -994,7 +822,6 @@ nav {
     }
     
     
-
 
     .about {
         padding: 3rem 1.5rem;
@@ -1021,10 +848,5 @@ nav {
         font-size: 3rem;
     }
     
-    
-    
-    
-
-
 
 }
