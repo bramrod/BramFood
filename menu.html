@@ -1,35 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>BramFood</title>
-    
-        <!-- Carga diferida de fuentes -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Nunito:wght@400;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
-        
-        <!-- CSS no crítico con carga diferida -->
-        <link rel="stylesheet" href="CSS/normalize.css" media="print" onload="this.media='all'">
-        <link rel="stylesheet" href="CSS/menu.css" media="print" onload="this.media='all'">
-        
-        <!-- FontAwesome con carga diferida -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
-        
-        <!-- Fallback para navegadores que no admiten onload -->
-        <noscript>
-            <link rel="stylesheet" href="CSS/normalize.css">
-            <link rel="stylesheet" href="CSS/style.css">
-            <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        </noscript>
-    
-    
-        <link rel="preload" href="/img/mainBackground.webp" as="image" fetchpriority="high">
-        
-    </head>
-    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BramFood</title>
+
+    <!-- FONTS  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="CSS/normalize.css">
+    <link rel="stylesheet" href="CSS/menu.css">
+
+    <!-- fontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
 <body>
     <nav>
         <div class="menu-toggle">
@@ -340,8 +327,9 @@
         </footer>
 </body>
 </html>
-<script defer>
-    document.querySelector('.menu-toggle').addEventListener('click', () => {
-    document.querySelector('.nav-menu').classList.toggle('active');
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.nav-menu').classList.toggle('active');
+        document.querySelector('.hamburger').classList.toggle('active');
     });
-    </script>
+</script>

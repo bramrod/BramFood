@@ -41,7 +41,6 @@ nav {
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
-
 .nav-logo {
     display: flex;
     align-items: center;
@@ -51,10 +50,8 @@ nav {
 
 .nav-logo svg {
     color: var(--secondary-color);
-    will-change: transform; /* Optimización para animaciones */
 }
 
-/* Optimización de transiciones para mejorar el rendimiento */
 .menu-toggle {
     display: none;
     cursor: pointer;
@@ -72,8 +69,7 @@ nav {
     width: 100%;
     height: 0.3rem;
     background-color: var(--secondary-color);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    will-change: transform, opacity; /* Optimización para animaciones */
+    transition: all 0.3s ease;
 }
 
 .hamburger.active span:nth-child(1) {
